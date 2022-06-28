@@ -14,5 +14,5 @@ app.use(express.static('./assets'));
 todoController(app);
 
 //listen to port
-app.listen(3000);
-console.log('Listening to port 3000');
+app.listen(port);
+console.log(`Listening to port ${port}`);
