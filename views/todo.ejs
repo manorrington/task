@@ -1,0 +1,36 @@
+<!-- THIS IS THE VIEW. THIS IS WHAT WE SEND TO THE USERS  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="/jquery.js"></script>
+    <link href="/style.css" rel="stylesheet" type="text/css"/>
+    <title>To do List</title>
+  </head>
+  <body>
+    <div id="todo-table">
+      <form method="POST">
+        <input
+          type="text"
+          name="item"
+          placeholder="What do you have planned for today...?"
+          required
+        />
+        <button type="submit">Add Item</button>
+      </form>
+      <ul>
+        <% for (let i = 0; i < todos.length; i++) { %>
+        <li><%= todos[i].item %></li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
