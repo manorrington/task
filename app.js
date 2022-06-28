@@ -2,7 +2,7 @@ const express = require('express');
 const todoController = require('./controller/controller');
 
 const app = express();
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
 //template engine
 app.set('view engine', 'ejs');
@@ -14,5 +14,4 @@ app.use(express.static('./assets'));
 todoController(app);
 
 //listen to port
-app.listen(port);
-console.log(`Listening to port ${port}`);
+app.listen(port, ()=> console.log(`Listening to port ${port}`));
